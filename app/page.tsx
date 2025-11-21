@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/ui/ContactForm';
 
 export default function Page() {
   return (
@@ -65,9 +66,9 @@ export default function Page() {
           <p className="mt-2 text-gray-600">Designed for clarity, built for speed, styled with Tailwind.</p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          {['Guided storytelling','Responsive layout','Instant credibility'].map((title, i) => (
+          {['Guided storytelling', 'Responsive layout', 'Instant credibility'].map((title, i) => (
             <div key={i} className="rounded-xl border p-5">
-              <div className="mb-3 h-10 w-10 rounded-md bg-green-100 text-green-700 grid place-items-center font-semibold">{i+1}</div>
+              <div className="mb-3 h-10 w-10 rounded-md bg-green-100 text-green-700 grid place-items-center font-semibold">{i + 1}</div>
               <h3 className="font-semibold">{title}</h3>
               <p className="mt-1 text-sm text-gray-600">Compose sections quickly with reusable UI primitives and consistent design tokens.</p>
             </div>
@@ -75,13 +76,18 @@ export default function Page() {
         </div>
       </section>
 
+      <section id="contact" className="mx-auto max-w-4xl px-4 py-16">
+        <h2 className="text-2xl font-semibold tracking-tight text-center">Contact Us</h2>
+        <ContactForm />
+      </section>
+
       <section id="faq" className="mx-auto max-w-4xl px-4 py-16">
         <h2 className="text-2xl font-semibold tracking-tight">Frequently asked questions</h2>
         <div className="mt-6 space-y-4">
           {[
-            {q:'Can I customize the design?',a:'Yes. Everything uses Tailwind classes so you can rapidly tailor spacing, colors, and layout.'},
-            {q:'Does this use shadcn?',a:'Yes. Components follow shadcn/ui patterns with Radix under the hood.'},
-            {q:'Is this TypeScript?',a:'Yes. The template and generated files default to TS/TSX.'}
+            { q: 'Can I customize the design?', a: 'Yes. Everything uses Tailwind classes so you can rapidly tailor spacing, colors, and layout.' },
+            { q: 'Does this use shadcn?', a: 'Yes. Components follow shadcn/ui patterns with Radix under the hood.' },
+            { q: 'Is this TypeScript?', a: 'Yes. The template and generated files default to TS/TSX.' }
           ].map((item, i) => (
             <details key={i} className="rounded-lg border p-4">
               <summary className="cursor-pointer font-medium">{item.q}</summary>
